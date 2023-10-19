@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+/* 今日学んだこと */
+/* いや、別に、親要素に指定したcssは、子要素に必ずしも、*/
+/* 継承されるわけじゃないぞ？？ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+    text-decoration: none;
+    list-style: none;
+}
+@mixin canvas(){
+    width: 100%;
+    height: 100vh;
+}
+@mixin BGI-set(){
+    background-size: cover;
+    background-position: center;
+}
+
+.section-01 {
+    @include canvas;
+    @include BGI-set;
+    position: relative;
+    background-image: url(../images/image.jpg);
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+
+        .logo{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        ul {
+            display: flex;
+            li {
+                margin-right: 30px;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+    .main-contents {
+        @include canvas;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+            color: white;
+            font-size: 4rem;
+        }
+        .music {
+            display: flex;
+            align-items: center;
+            transform: translateX(-10vw);
+
+            span {
+                user-select: none;
+            }
+            .triangle {
+                width: 50px;
+                height: 50px;
+                background-image: url(../images/play.png);
+                @include BGI-set;
+            }
+        }
+    }
+}

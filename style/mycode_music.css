@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+/* 今日学んだこと */
+/* いや、別に、親要素に指定したcssは、子要素に必ずしも、*/
+/* 継承されるわけじゃないぞ？？ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.section-01 {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url(../images/image.jpg);
+}
+.section-01 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.section-01 nav .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.section-01 nav ul {
+  display: flex;
+}
+.section-01 nav ul li {
+  margin-right: 30px;
+}
+.section-01 nav ul li a {
+  color: black;
+}
+.section-01 .main-contents {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-01 .main-contents ul {
+  color: white;
+  font-size: 4rem;
+}
+.section-01 .main-contents .music {
+  display: flex;
+  align-items: center;
+  transform: translateX(-10vw);
+}
+.section-01 .main-contents .music span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.section-01 .main-contents .music .triangle {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/play.png);
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=mycode_music.css.map */

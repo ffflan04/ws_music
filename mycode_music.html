@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music website</title>
+    <link rel="stylesheet" href="./style/mycode_music.css">
+</head>
+<body>
+    <section class="section-01">
+        <nav>
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+                <span>Real Sound</span>
+            </div>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">音楽一覧</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="main-contents">
+            <ul class="main-texts">
+                <li>NEVER</li>
+                <li>STOP</li>
+                <li>YOUR MUSIC</li>
+            </ul>
+            <div class="music">
+                <span>Click Here to Listen</span>
+                <div class="triangle"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const $triangle = document.querySelector('.triangle')
+
+        let num = 0
+        $triangle.onclick = function(){
+            if (num % 2 == 0){
+                $triangle.style.backgroundImage = "url(./images/pause.png)"
+                num++
+            }else{
+                $triangle.style.backgroundImage = "url(./images/play.png)"
+                num++
+            }
+        }
+    </script>
+</body>
+</html>
